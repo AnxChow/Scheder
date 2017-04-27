@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
+// import logo from './logo.svg';
+// import './App.css';
 
 class App extends Component {
   render() {
-    return (
+    // return (
+    //   <div>
+    //     {this.props.children}
+    //   </div>
+    // );
+    //return (
       // <div className="App">
       // 	<div className="App-header">
       //     Schedule Maker!
@@ -35,14 +41,14 @@ class App extends Component {
       //             <button type="button"id="add_activity">Add Activity</button>
       // 	</form>
       // </div>
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2></h2>
-        </div>
-      
-      </div>
-    );
+      // <div className="App">
+      //   <div className="App-header">
+      //     <img src={logo} className="App-logo" alt="logo" />
+      //     <h2></h2>
+      //   </div>
+      //
+      // </div>
+    //);
   }
 }
 
