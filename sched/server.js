@@ -9,7 +9,7 @@
 // var routes = require('./app/routes');
 var config = require('./config');
 var mongoose = require('mongoose');
-var Character = require('./models/character');
+var User = require('./models/user');
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -27,6 +27,24 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Retrieve
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/exampleDb", function(err, db) {
+  if(!err) {
+    console.log("We are connected");
+  }
+  //
+  // db.collection('test', function(err, collection) {});
+  // 
+  // db.collection('test', {w:1}, function(err, collection) {});
+  //
+  // db.createCollection('test', function(err, collection) {});
+  //
+  // db.createCollection('test', {w:1}, function(err, collection) {});
+});
 
 // app.use(function(req, res) {
 //   Router.match({ routes: routes.default, location: req.url }, function(err, redirectLocation, renderProps) {
