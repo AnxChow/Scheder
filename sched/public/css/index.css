@@ -1,0 +1,27 @@
+h1{
+  float:center;
+}
+
+form.div1{
+  float:left;
+  height:100%;
+  width:auto;
+}
+
+div#root{
+  height:100px;
+  width:600px;
+}
+
+div.div2{
+  height:100%;
+  float:right;
+}
+
+div.clear{
+  clear:both;
+  height:1px;
+  overflow:hidden;
+  margin-top:-1px;
+  font-size:0pt;
+}

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="stylesheet" href="/css/index.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -17,11 +16,11 @@
     <title>React App</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="sched"></div>
 
     <h1>Planit</h1>
     <hl>
-    <form id="survey" class="div1">
+    <form action="sched" id="survey" method="post">
       <div>
         <p> How much time do you have to work today?</p> <input type="text" name="total"> hours</input><br>
         <p> Do you want to take breaks?</p>
@@ -43,14 +42,9 @@
                   </td>
                 </tr>
               </table>
-              <button type="button" id="sub">Submit</button>
-              <button type="button" id="add_activity">Add Activity</button>
+              <input type="submit" onClick="makeSched(this.form)"/>
+              <button type="button"id="add_activity">Add Activity</button>
     </form>
-    <div class="div2" id="schedule">
-      <p>stuff to come</p>
-    </div>
-    <div class="clear">
-    </div>
     <script src="/js/vendor.js"></script>
     <script src="/js/vendor.bundle.js"></script>
     <script src="/js/bundle.js"></script>

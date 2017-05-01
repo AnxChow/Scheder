@@ -12,7 +12,8 @@ const element = React.createElement(
 ReactDOM.render(
   //element,
   <App />,
-  document.getElementById('root')
+  document.getElementById('root'),
+  document.getElementById('sched')
 );
 
 // ReactDOM.render(

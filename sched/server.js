@@ -27,7 +27,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+// app.use(express.bodyParser());
 // Retrieve
 var MongoClient = require('mongodb').MongoClient;
 
@@ -38,7 +38,7 @@ MongoClient.connect("mongodb://localhost:27017/exampleDb", function(err, db) {
   }
   //
   // db.collection('test', function(err, collection) {});
-  // 
+  //
   // db.collection('test', {w:1}, function(err, collection) {});
   //
   // db.createCollection('test', function(err, collection) {});
@@ -60,6 +60,14 @@ MongoClient.connect("mongodb://localhost:27017/exampleDb", function(err, db) {
 //       res.status(404).send('Page Not Found')
 //     }
 //   });
+// });
+
+// app.post('/', function (req, res) {
+//     console.log(req.body);
+//     //var sched=document.createElement("table");
+//     //sched.innerHTML='<tr><td><label>Thing to do: </label><br/><input type="text" name="act1"class="activity"></td><td><label>Time (minutes): </label><br/><input type="text" name="time1"class="time"></td></tr>';
+//     res.json(req.body);
+//     // res.render('the_template', { name: req.body.name });
 // });
 
 app.listen(app.get('port'), function() {
